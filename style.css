@@ -1,0 +1,851 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+html {
+    scroll-behavior: smooth;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #cccbcf;
+    background-size: cover;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(110, 135, 130, 1);
+    z-index: 99;
+    transition: transform 0.3s ease, padding 0.3s ease;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.logo-text {
+    font-size: 2em;
+    color: #2E2C39;
+    user-select: none;
+    font-family: 'Dancing Script', cursive;
+}   
+
+.navigation {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: 380px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-btn {
+    cursor: pointer;
+    font-size: 18px; /* Increase the font size */
+    padding: 10px 20px;
+}
+
+.dropdown-content,
+.sub-dropdown-content,
+.sub-dropdown-content2 {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background-color: #2d9c4e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    width: 200px; /* Increase width of the dropdown */
+    padding: 15px 0; /* Increase padding for a larger look */
+    border-radius: 50px; /* Optional: rounded corners */
+}
+
+/* Dropdown Content Position */
+.dropdown-content {
+    top: 100%;
+    left: 0;
+    z-index: 100;
+}
+
+.sub-dropdown-content {
+    top: 10px;
+    left: 170px;
+    z-index: 100;
+    background: url(https://img.freepik.com/free-vector/realistic-winter-season-celebration-background_23-2149852387.jpg);
+    border-style: solid;
+}
+
+.sub-dropdown-content2 {
+    top: 65px;
+    left: 170px;
+    z-index: 100;
+    background: url(https://media.istockphoto.com/id/1390999722/vector/summertime-background-with-palm-trees-summer-sun-and-white-brush-strokes-for-your-season.jpg?s=612x612&w=0&k=20&c=ZLnXxdhzeXFiljXoK-T9-Mc4IVIr5eaZ4uLLlLDlOzA=);
+    border-style: solid;
+}
+
+/* Increase Font Size and Padding */
+.dropdown-content a,
+.sub-dropdown-content a,
+.sub-dropdown-content2 a {
+    display: block;
+    padding: 12px 20px; /* Increase padding for larger menu items */
+    text-decoration: none;
+    color: #333;
+    font-size: 16px; /* Larger font size */
+}
+
+/* Main Dropdown */
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* First Sub-dropdown for Winter po itoh */
+.sub-dropdown {
+    position: relative;
+}
+
+.sub-dropdown-content {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.sub-dropdown:hover .sub-dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Second Sub-dropdown for Summer po itoh */
+.sub-dropdown-content2 {
+    position: absolute;
+    top: 0;
+    left: 90%;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+.sub-dropdown:hover .sub-dropdown-content2 {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
+/* Optional: Styling for Hovered Links */
+.dropdown-content a:hover,
+.sub-dropdown-content a:hover,
+.sub-dropdown-content2 a:hover {
+    color: #fff;
+}
+
+
+/* Link styles */
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #2E2C39;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 50px;
+    transition: color 0.5s;
+}
+
+
+/* Underline Effect */
+.navigation .home-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #E7E3F1;
+    border-radius: 5px;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover Effect: Pop-up Animation for Home only */
+.navigation .home-link:hover::after {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* Change text color when hovered */
+.navigation .home-link:hover,
+.navigation .dropdown-btn:hover {
+    color: #d1d1d1; /* Change this to your desired hover color */
+}
+
+
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 550px;
+}
+
+.social-media-icons a {
+    color: #2E2C39;
+    font-size: 2em;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.social-media-icons a:hover {
+    color: #544e58;
+}
+
+.text-container {
+    color: #2043;
+}
+
+/* Modal background (overlay) */
+.cart-modal {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    width: 300px; /* Modal width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 5, 0, 0.8); /* Background color */
+    display: flex;
+    justify-content: flex-end; /* Align the content to the right */
+    z-index: 1000; /* Ensure the modal is on top */
+    transition: right 0.3s ease-in-out; /* Transition for sliding effect */
+}
+
+/* Cart Header Styling */
+.cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align the title and close button */
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* "Your Cart" Text */
+.cart-header h3 {
+    font-size: 1.5em;
+    color: #2E2C39;
+    margin: 0;
+}
+
+/* When the modal is shown */
+.cart-modal.show {
+    right: 0; /* Move modal to the right when it's visible */
+}
+
+/* Modal content */
+.cart-sidebar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #49815a;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Checkout Btn content */
+
+
+/* Cart item list */
+#cartItems {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    color: #000;
+    font-weight: 600;
+}
+
+
+#cartItems li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-family: Courier, monospace;
+}
+
+#cartItems li:last-child {
+    border-bottom: none;
+}
+
+/* Total price */
+.total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #000;
+}
+
+#checkout-notification {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.remove-btn {
+    margin-left: 10px;
+    padding: 5px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #ff1a1a;
+}
+
+/* Close Button */
+.close-btn {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    background: transparent; /* No background color */
+    border: none;
+    cursor: pointer;
+}
+
+/* Close Button Hover */
+.close-btn:hover {
+    color: #ff4d4d; /* Only change the text color on hover */
+    background: transparent; /* Ensure no background color is added */
+}
+
+/* Notification */
+#notification {
+    position: fixed;
+    bottom: 750px;
+    right: 850px;
+    padding: 10px 20px;
+    background-color: #5da05f;
+    color: #fff;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#notification.show {
+    opacity: 1;
+}
+
+.box {
+    display: inline-block;
+    width: 20%; /* Make the box smaller */
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #1dd7f0;
+    border: solid;
+}
+
+/* Box Container: Ensures the boxes are in a line */
+#box-container {
+    flex-direction: column;
+    justify-content: flex-start; /* Align items in a line */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping if there’s not enough space */
+    margin: 40px 0;
+    margin-top: 100px;
+}
+
+/* Box Container: Ensures the boxes are in a line */
+#box-container2 {
+    flex-direction: column;
+    justify-content: flex-start; /* Align items in a line */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping if there’s not enough space */
+    margin: 40px 0;
+    margin-top: 100px;
+}
+
+
+.gender-title {
+    font-size: 2em;
+    font-weight: 600;
+    color: #2E2C39;
+    margin-bottom: 20px;
+    position: relative;
+    top: 35px; /* Move it up by 10px */
+    text-align: center;
+    width: 100%;
+}
+
+.gender-title p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+
+/* Adjust box title position */
+/*Winter Title*/
+.box-title {
+    font-size: 2em;
+    font-weight: 600;
+    color: #2E2C39;
+    margin-bottom: 20px;
+    position: relative;
+    top: 35px; /* Move it up by 10px */
+    text-align: center;
+    width: 100%;
+    background: url(https://img.freepik.com/free-vector/realistic-winter-season-celebration-background_23-2149852387.jpg);
+    border-radius: 10px;
+    border-bottom: 5px solid #000;
+
+}
+
+
+.box-title p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+
+.box img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.box h3 {
+    font-family: American Typewriter, serif;
+}
+
+.box .price {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+#men2 {
+    padding-top: 120px;
+}
+
+/*Summer Title*/
+.box-title2 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #2E2C39;
+    margin-bottom: 20px;
+    position: relative;
+    top: 5px; /* Move it up by 10px */
+    text-align: center;
+    width: 100%;
+    background: url(https://media.istockphoto.com/id/1390999722/vector/summertime-background-with-palm-trees-summer-sun-and-white-brush-strokes-for-your-season.jpg?s=612x612&w=0&k=20&c=ZLnXxdhzeXFiljXoK-T9-Mc4IVIr5eaZ4uLLlLDlOzA=);
+    border-radius: 10px;
+    border-bottom: 5px solid #000;
+
+}
+
+.box-title2 p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+
+.box img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.box h3 {
+    font-family: American Typewriter, serif;
+}
+
+.box .price {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/*Winter Women*/
+.box-title3 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #2E2C39;
+    margin-bottom: 20px;
+    position: relative;
+    top: 35px; /* Move it up by 10px */
+    text-align: center;
+    width: 100%;
+    background: url(https://image.shutterstock.com/image-vector/christmas-seamless-pattern-various-complex-260nw-1779259100.jpg);
+    border-radius: 10px;
+    border-bottom: 5px solid #000;
+
+}
+
+.box-title3 p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+
+/*Summer Women*/
+.box-title4 {
+    font-size: 2em;
+    font-weight: 600;
+    color: #2E2C39;
+    margin-bottom: 20px;
+    position: relative;
+    top: 35px; /* Move it up by 10px */
+    text-align: center;
+    width: 100%;
+    background: url(https://c1.wallpaperflare.com/preview/24/198/423/pink-water-cute-happy.jpg);
+    border-radius: 10px;
+    border-bottom: 5px solid #000;
+
+}
+
+.box-title4 p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+
+.add-to-cart-btn {
+    background-color: #2E2C39;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.open-inbox-btn {
+    background-color: #2E2C39;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.open-inbox-btn:hover {
+    background-color: #544e58;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #544e58;
+}
+
+.inbox-modal {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Starts off-screen */
+    width: 500px;
+    height: 100%;
+    background-color: rgba(0, 5, 0, 0.8);
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+  }
+  
+  .inbox-modal.show {
+    right: 0; /* Shows the modal when the 'show' class is added */
+  }
+
+.inbox-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #E5989B;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.inbox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .inbox-close-btn {
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .inbox-close-btn:hover {
+    background-color: transparent;
+    color: red;
+  }
+
+  .form-content {
+    margin-top: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form label {
+    margin-bottom: 5px;
+  }
+  
+  form input, form textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form button {
+    padding: 10px;
+    background-color: #889b88;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #9c9c9c;
+  }
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .add-to-cart-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .add-to-cart-btn i {
+        font-size: 1em;
+    }
+}
+
+/* Fragrance Content Image */
+.fragrance-content {
+    width: 1930px;
+    height: 920px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Container with Positioning */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Content Container for Overlay Text */
+.content-container {
+    position: absolute;
+    width: 600px;
+    top: 40%;
+    left: 50px; /* Adjust this value to move text closer or farther from the left */
+    transform: translateY(-50%);
+    color: #fff;
+    text-align: left;
+    padding: 100px;
+    background: rgba(73, 201, 126, 0.9); /* Optional: Semi-transparent background */
+    border-radius: 100px;
+}
+
+#AboutWrap {
+    position: relative;
+}
+
+.wrap-background {
+    background: rgba(63, 102, 79, 0.9);
+    height: 1000px; /* Set the desired height */
+    margin-top: -10px; /* This will now only move the background */
+    border-radius: 0px;
+    border: solid;
+    border-color: #326441;
+}
+
+.about-title {
+    font-size: 36px; /* Adjust the size as needed */
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-top: 140px;
+    font-family: 'Oswald', sans-serif;
+    -webkit-text-stroke: 0.5px #fff;
+}
+
+/* About Fragrance Image */
+.about-fragrance {
+    width: 530px;
+    height: 530px;
+    margin-left: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+}
+
+/* Image Container with Positioning */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.about-container {
+    position: absolute;
+    top: 55%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.about-content-container {
+    width: 800px;
+    color: #fff;
+    text-align: left;
+    padding: 100px;
+    background: rgba(63, 102, 79, 0.9);
+    border-radius: 20px;
+    margin-left: 150px;
+}
+
+/* Title and Text Styling */
+.title {
+    font-size: 1.5em;
+    font-weight: 1000;
+    margin-bottom: 50px;
+    font-family: Courier, monospace;
+}
+
+.content {
+    font-size: 1em;
+    font-family: Courier, monospace;
+}
+
+/*Responsive Screen*/
+
+/* Mobile-first approach */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+    }
+
+    .logo-container {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .navigation {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .social-media-icons {
+        display: none; /* Hide social media icons for mobile */
+    }
+
+    .cart-btn, .inbox-btn {
+        margin-top: 1rem;
+    }
+}
+
+/* Tablet/Small Laptop */
+@media (max-width: 1024px) {
+    .box-container, .box-container2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .gender-title, .box-title, .box-title2, .box-title3 {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+
+/* Chromebook/Medium Laptop (1366px width and up) */
+@media (min-width: 1366px) and (max-width: 1920px) {
+    .box-container, .box-container2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+        gap: 1.5rem;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .gender-title, .box-title, .box-title2, .box-title3 {
+        text-align: center;
+        font-size: 1.75rem;
+    }
+
+    #navbar {
+        padding: 1.2rem;
+    }
+}
+
+/* Large Laptop/Desktop */
+@media (min-width: 1025px) {
+    .box-container, .box-container2 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 items per row for large screens */
+        gap: 1.5rem;
+    }
+
+    .box {
+        width: 100%;
+    }
+}
+
+
