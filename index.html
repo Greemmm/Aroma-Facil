@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="https://www.shareicon.net/data/512x512/2015/11/01/665487_music_512x512.png" type="image/icon type">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+    emailjs.init({
+    publicKey: "MbZSnGeoDnEP5p37Z",
+        });
+    })();
+    </script>
+    <title>Aroma Fácil</title>
+</head>
+<body>
+    <header id="navbar">
+        <div class="logo-container">
+            <img src="Logo.jpg" class="logo-image" alt="Logo">
+            <h2 class="logo-text">Aroma Fácil</h2>
+            <nav class="navigation">
+                <a href="#home" class="home-link">Home</a>
+                <a href="#about" class="home-link">About</a>
+                <div class="dropdown">
+                    <a href="#fragrance" class="dropdown-btn">Fragrance</a>
+                    <div class="dropdown-content">
+                        <!-- Winter Dropdown with Submenu -->
+                        <div class="sub-dropdown">
+                            <a href="#">Winter</a>
+                            <div class="sub-dropdown-content">
+                                <a href="#men">Men</a>
+                                <a href="#women">Women</a>
+                            </div>
+                        </div>
+                        <!-- Summer Dropdown with Submenu -->
+                        <div class="sub-dropdown">
+                            <a href="#">Summer</a>
+                            <div class="sub-dropdown-content2">
+                                <a href="#men2">Men</a>
+                                <a href="#women2">Women</a>
+                        </div>
+                </div>
+                </div>  
+            </nav>
+                      
+            <div class="social-media-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="cart-btn">
+                <button class="add-to-cart-btn" id="addToCartButton">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
+            </div>
+            <div class="inbox-btn">
+                <button class="open-inbox-btn" id="openInboxButton">
+                    <i class="fa-solid fa-inbox"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="ImageWrap">
+        <div id="home" class="image-container">
+            <img src="Content2.jpg" class="fragrance-content">
+            <div class="content-container left-align">
+                <div class="title">Do you love smelling fresh?</div>
+                <div class="content">
+                    <p>At Aroma Fácil, our mission is to provide you with the largest selection of perfumes and colognes at the lowest prices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about"></div>
+<div id="AboutWrap">
+    <div class="wrap-background">
+        <p class="about-title">About Us</p>
+        <div class="image-about">
+            <img src="aboutfragrance.png" class="about-fragrance">
+            <div class="about-container">
+                <div class="about-content-container left-align">
+                    <div class="title">What makes us different?</div>
+                    <div class="about-content">
+                        <p>Our fragrances are crafted with a blend of high-quality, natural ingredients, designed to evoke unique memories and emotions. Each scent tells its own story, combining distinct notes that reflect the seasons, while our personalized options, such as custom bottle engravings, ensure that every bottle is not only a sensory experience but also a cherished keepsake.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+<div id="men"></div>
+</div>
+    <!-- Products Section -->
+    <div id="box-container">
+        <div class="gender-title">
+            <p>Men</p>
+        </div>
+        <div class="box-title">
+            <p>Winter</p>
+        </div>
+
+        <!-- My pers product -->
+        <div class="box" data-product="Azzaro Most Wanted" data-price="6999">
+            <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+            <h3>Azzaro Most Wanted</h3>
+            <div class="price">₱6,999</div>
+            <button class="btn add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- sekand product-->
+        <div class="box" data-product="Chanel Bleu" data-price="9999">
+            <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+            <h3>Chanel Bleu</h3>
+            <div class="price">₱9,999</div>
+            <button class="btn add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- terd product -->
+        <div class="box" data-product="Dior Sauvage" data-price="8499">
+            <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+            <h3>Dior Sauvage</h3>
+            <div class="price">₱8,499</div>
+            <button class="btn add-to-cart-btn">Add to Cart</button>
+        </div>
+        <!-- My pers product -->
+    <div class="box" data-product="Azzaro Most Wanted" data-price="6999">
+        <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+        <h3>Azzaro Most Wanted</h3>
+        <div class="price">₱6,999</div>
+        <button class="btn add-to-cart-btn">Add to Cart</button>
+    </div>
+    <!-- My pers product -->
+    <div class="box" data-product="Azzaro Most Wanted" data-price="6999">
+        <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+        <h3>Azzaro Most Wanted</h3>
+        <div class="price">₱6,999</div>
+        <button class="btn add-to-cart-btn">Add to Cart</button>
+    </div>
+    <!-- My pers product -->
+    <div class="box" data-product="Azzaro Most Wanted" data-price="6999">
+        <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+        <h3>Azzaro Most Wanted</h3>
+        <div class="price">₱6,999</div>
+        <button class="btn add-to-cart-btn">Add to Cart</button>
+    </div>
+    <!-- My pers product -->
+    <div class="box" data-product="Azzaro Most Wanted" data-price="6999">
+        <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+        <h3>Azzaro Most Wanted</h3>
+        <div class="price">₱6,999</div>
+        <button class="btn add-to-cart-btn">Add to Cart</button>
+    </div>
+    </div>
+    <div id="men2"></div>
+    <div class="box-title2">
+        <p>Summer</p>
+    </div>
+
+    <!-- My pers product -->
+    <div class="box" data-product="Azzaro Most Wanted" data-price="6999">
+        <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+        <h3>Azzaro Most Wanted</h3>
+        <div class="price">₱6,999</div>
+        <button class="btn add-to-cart-btn">Add to Cart</button>
+    </div>
+
+    <!-- sekand product-->
+    <div class="box" data-product="Chanel Bleu" data-price="9999">
+        <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+        <h3>Chanel Bleu</h3>
+        <div class="price">₱9,999</div>
+        <button class="btn add-to-cart-btn">Add to Cart</button>
+    </div>
+
+    <!-- terd product -->
+    <div class="box" data-product="Dior Sauvage" data-price="8499">
+        <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+        <h3>Dior Sauvage</h3>
+        <div class="price">₱8,499</div>
+        <button class="btn add-to-cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+    <div class="cart-modal">
+        <div class="cart-sidebar">
+            <!-- Header for the cart modal -->
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-btn">×</button>
+            </div>
+            <ul id="cartItems"></ul>
+            <p class="total">Total: ₱<span id="totalPrice"></span></p>
+            <button id="checkoutButton" class="checkout-btn">Checkout
+                <i class="fa-solid fa-bag-shopping"></i>
+            </button>
+        </div>
+    </div>
+
+ <!-- Inbox Modal -->
+ <div class="inbox-modal" id="inboxModal">
+    <div class="inbox-content">
+        <div class="inbox-header">
+            <h3>If you have any further questions, please fill out this form!</h3>
+            <button class="inbox-close-btn" id="closeInboxBtn">×</button>
+        </div>
+        <div class="form-content">
+            <form id="contactForm">
+                <!-- Name Input -->
+                <input type="text" id="user_name" name="user_name" placeholder="Your Name" required />
+            
+                <!-- Email Input -->
+                <input type="email" id="user_email" name="user_email" placeholder="Your Email" required />
+            
+                <!-- Message Box -->
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            
+                <!-- Submit Button -->
+                <button type="submit" onclick="sendMail()">Send Message</button>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+    <div id="women"></div>
+    <!-- Products Section -->
+    <div id="box-container2">        
+        <div class="gender-title">
+            <p>Women</p>
+        </div>
+
+        <div class="box-title3">
+            <p>Winter</p>
+        </div>
+
+        <!-- My pers product -->
+        <div class="box" data-product="Azzaro Most Wanted" data-price="6999">
+            <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+            <h3>Azzaro Most Wanted</h3>
+            <div class="price">₱6,999</div>
+            <button class="btn add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- sekand product-->
+        <div class="box" data-product="Chanel Bleu" data-price="9999">
+            <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+            <h3>Chanel Bleu</h3>
+            <div class="price">₱9,999</div>
+            <button class="btn add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- terd product -->
+        <div class="box" data-product="Dior Sauvage" data-price="8499">
+            <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+            <h3>Dior Sauvage</h3>
+            <div class="price">₱8,499</div>
+            <button class="btn add-to-cart-btn">Add to Cart</button>
+        </div>
+        <!-- My pers product -->
+    <div class="box" data-product="Azzaro Most Wanted" data-price="6999">
+        <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+        <h3>Azzaro Most Wanted</h3>
+        <div class="price">₱6,999</div>
+        <button class="btn add-to-cart-btn">Add to Cart</button>
+    </div>
+    <!-- My pers product -->
+    <div class="box" data-product="Azzaro Most Wanted" data-price="6999">
+        <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+        <h3>Azzaro Most Wanted</h3>
+        <div class="price">₱6,999</div>
+        <button class="btn add-to-cart-btn">Add to Cart</button>
+    </div>
+    <!-- My pers product -->
+    <div class="box" data-product="Azzaro Most Wanted" data-price="6999">
+        <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+        <h3>Azzaro Most Wanted</h3>
+        <div class="price">₱6,999</div>
+        <button class="btn add-to-cart-btn">Add to Cart</button>
+    </div>
+    <!-- My pers product -->
+    <div class="box" data-product="Azzaro Most Wanted" data-price="6999">
+        <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+        <h3>Azzaro Most Wanted</h3>
+        <div class="price">₱6,999</div>
+        <button class="btn add-to-cart-btn">Add to Cart</button>
+    </div>
+    </div>
+    <div id="women2"></div>
+    <div class="box-title4">
+        <p>Summer</p>
+    </div>
+
+    <!-- My pers product -->
+    <div class="box" data-product="Azzaro Most Wanted" data-price="6999">
+        <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+        <h3>Azzaro Most Wanted</h3>
+        <div class="price">₱6,999</div>
+        <button class="btn add-to-cart-btn">Add to Cart</button>
+    </div>
+
+    <!-- sekand product-->
+    <div class="box" data-product="Chanel Bleu" data-price="9999">
+        <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+        <h3>Chanel Bleu</h3>
+        <div class="price">₱9,999</div>
+        <button class="btn add-to-cart-btn">Add to Cart</button>
+    </div>
+
+    <!-- terd product -->
+    <div class="box" data-product="Dior Sauvage" data-price="8499">
+        <img src="https://www.yourperfumewarehouse.co.uk/wp-content/uploads/2024/07/195049-3.jpg" alt="Product Image">
+        <h3>Dior Sauvage</h3>
+        <div class="price">₱8,499</div>
+        <button class="btn add-to-cart-btn">Add to Cart</button>
+    </div>
+</div>
+
+
+<!-- Notification -->
+<div id="notification" class="notification">Added to Cart!</div>
+<div id="checkout-notification" class="checkout-notification">Order Placed!</div>
+
+<script src="script.js"></script>
+<script src="form.js"></script>
+
+</body>
+</html>
